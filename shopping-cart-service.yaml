@@ -1,3 +1,3 @@
-limits-service:
+shopping-cart-service:
   minimum: 99
   maximum: 9999
