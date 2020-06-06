@@ -1,7 +1,3 @@
-shopping-cart-service:
-  minimum: 99
-  maximum: 9999
-
 spring:
   profiles: dev
   h2:
@@ -24,11 +20,26 @@ spring:
 
 spring:
   profiles: test
-  h2:
-    console:
-      enabled: true
   datasource:
-    url: jdbc:mysql://localhost:3306/shopping_cart?useSSL=false
+    url: jdbc:mysql://localhost:3307/shopping_cart?useSSL=false
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://localhost:3307/shoppingcart
     username: root
     password: 12345
     driver-class-name: com.mysql.jdbc.Driver
