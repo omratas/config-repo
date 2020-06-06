@@ -15,6 +15,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  initialization-mode: always
 
 ---
 
