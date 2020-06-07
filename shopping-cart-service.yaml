@@ -28,13 +28,6 @@ feign:
       feignName:
         connectTimeout: 5000
         readTimeout: 5000
-        loggerLevel: full
-        errorDecoder: com.example.SimpleErrorDecoder
-        retryer: com.example.SimpleRetryer
-        decode404: false
-        encoder: com.example.SimpleEncoder
-        decoder: com.example.SimpleDecoder
-        contract: com.example.SimpleContract
 
 ---
 
