@@ -1,3 +1,7 @@
+delivery-service:
+  cost.per.delivery: 2
+  cost.per.product: 3
+
 logging:
   level:
     root: INFO

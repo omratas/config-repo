@@ -48,9 +48,9 @@ spring:
         format_sql: true
 logging:
   level:
-    root: ERROR
-    org.springframework.web: ERROR
-    org.hibernate: ERROR
+    root: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
 
 feign:
   client:
