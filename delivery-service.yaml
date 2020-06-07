@@ -1,6 +1,7 @@
 delivery-service:
   cost.per.delivery: 2
   cost.per.product: 3
+  fixed.cost: 2.99
 
 logging:
   level:
