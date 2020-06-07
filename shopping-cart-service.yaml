@@ -16,6 +16,25 @@ spring:
     properties:
       hibernate:
         format_sql: true
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.hibernate: INFO
+
+feign:
+  client:
+    config:
+      feignName:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+        errorDecoder: com.example.SimpleErrorDecoder
+        retryer: com.example.SimpleRetryer
+        decode404: false
+        encoder: com.example.SimpleEncoder
+        decoder: com.example.SimpleDecoder
+        contract: com.example.SimpleContract
 
 ---
 
@@ -34,3 +53,22 @@ spring:
     properties:
       hibernate:
         format_sql: true
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
+
+feign:
+  client:
+    config:
+      feignName:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+        errorDecoder: com.example.SimpleErrorDecoder
+        retryer: com.example.SimpleRetryer
+        decode404: false
+        encoder: com.example.SimpleEncoder
+        decoder: com.example.SimpleDecoder
+        contract: com.example.SimpleContract
