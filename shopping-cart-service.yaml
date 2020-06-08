@@ -44,7 +44,7 @@ spring:
     initialization-mode: always
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
     database-platform: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
     properties:
